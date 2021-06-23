@@ -18,6 +18,7 @@ import jp.co.jcps.Common.DBConnection;
  */
 @WebServlet("/JoinApprovalSave")
 public class JoinApprovalSaveServlet extends HttpServlet {
+	public static final Object OBJEC. = doget;
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -43,7 +44,7 @@ public class JoinApprovalSaveServlet extends HttpServlet {
 		// リクエストから情報を取得する
 		boolean approvalFlg = request.getParameter("approvalFlg").equals("true");
 		// TODO: リクエストから承認・否認するユーザーのユーザーIDを取得しなさい
-		String registUserId = ;
+		String registUserId =  (String) request.getSession().getAttribute("user_id");
 
 		// セッションからログイン中のユーザーの部長クラブIDを取得する
 		String leaderClubId = (String) request.getSession().getAttribute("leaderClubId");
@@ -52,8 +53,7 @@ public class JoinApprovalSaveServlet extends HttpServlet {
 			if (approvalFlg) {
 				// 承認する場合
 				// TODO: 部員登録申請を承認する場合のみ実行する処理（メソッド）を呼び出しなさい。
-
-
+				 doget.;
 			}
 			//TODO: 部員登録申請を承認する場合および拒否する場合どちらも実行する処理（メソッド）を呼び出しなさい。
 
@@ -74,7 +74,7 @@ public class JoinApprovalSaveServlet extends HttpServlet {
 
 		//SQLを宣言
 		// TODO: SQL文を完成させなさい。
-		String sql = "INSERT INTO ";
+		String sql = "INSERT INTO club_id,user_id,leader_flg from trn_club_member";
 
 		// SQLに埋め込むパラメータリストを定義
 		List<String> paramList = new ArrayList<String>();
@@ -97,12 +97,12 @@ public class JoinApprovalSaveServlet extends HttpServlet {
 
 		//SQLを宣言
 		// TODO: SQL文を完成させなさい。
-		String sql = "DELETE FROM ";
+		String sql = "DELETE FROM trn_club_member where trn_club_menber.club_id == mst_club.club_id and trn_join_request.user_id==trn_club_member.user_id";
 
 		// SQLに埋め込むパラメータリストを定義
 		List<String> paramList = new ArrayList<String>();
 		// TODO: SQLに埋め込む値をparamListに設定しなさい。
-
+			
 
 		// SQLを実行し結果を取得
 		DBConnection db = new DBConnection();
