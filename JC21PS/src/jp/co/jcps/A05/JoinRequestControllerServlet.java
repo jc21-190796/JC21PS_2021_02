@@ -60,6 +60,7 @@ public class JoinRequestControllerServlet extends HttpServlet {
 		 *  ログインユーザーの情報を使う。
 		 */
 		paramList.add(userId);
+		paramList.add(userId);
 
 
 
