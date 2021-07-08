@@ -47,6 +47,7 @@
   			ヒント
   			Listの中身はget(【番号】)で取得できる。
   			 --%>
+
   			<td><%=bean.getUserNameList().get(i) %></td>
 
   			<!-- ヒント
