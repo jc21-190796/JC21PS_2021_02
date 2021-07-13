@@ -44,7 +44,7 @@ public class JoinRequestSaveServlet extends HttpServlet {
 
 
 		// TODO: データベースにデータを登録する為のSQL文を完成させなさい。
-		String sql = "INSERT INTO trn_join_request (userId,clubId) VALUES (?,?);l";
+		String sql = "INSERT INTO trn_join_request (user_id,club_id) VALUES (?,?);";
 
 		// SQLに埋め込むパラメータリストを定義
 		List<String> paramList = new ArrayList<String>();
@@ -58,8 +58,8 @@ public class JoinRequestSaveServlet extends HttpServlet {
 		 * A04,ParticipantListControllerServlet.java 43行目を参照
 		 */
 		HttpSession session =request.getSession(false);
-		String userId =(String) session.getAttribute("user_id") ;
-		String clubId = (String) request.getParameter("club_id");
+		String userId =(String) session.getAttribute("userId") ;
+		String clubId = (String) request.getParameter("registClubId");
 		paramList.add(userId);
 		paramList.add(clubId);
 
