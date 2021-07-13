@@ -50,7 +50,7 @@
   			<%--TODO
  			参加者名の一覧が表示されるように実装しなさい。
  			ヒント
- 			Listの要素はget(【番号】)で取得することができる。
+ 			Listの要素はget(【番号】)で取得することができる。。
  			 --%>
   			<tr>
  				<td><%= bean.getParticipantList().get(i)%></td>
