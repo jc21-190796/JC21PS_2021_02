@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>
 <jsp:useBean id="messageBean" class="jp.co.jcps.Bean.MessageBean" scope="request" />
 <jsp:useBean id="bean" class="jp.co.jcps.A06.JoinApprovalBean" scope="request" />
-
 <link rel="stylesheet" type="text/css" href="/JC21PS/css/common.css" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,22 +14,19 @@
 <style type="text/css">
 	th {
 		background-color: #add8e6;
-	}
+	 }
 </style>
 </head>
 <body>
   <div class="container"></div>
   <h2 class="teacher-header">部員登録承認</h2>
   <jsp:include page="/A00/Header.jsp"></jsp:include>
-
   <%
 	// メッセージがある場合は表示
 	for(int i = 0; i < messageBean.getMessageList().size(); i++){
 		out.println("<p>" + messageBean.getMessageList().get(i) + "</p>");
-	}
+	 }
   %>
-
-
   <form name="form" action="/JC21PS/JoinApprovalSave" method="POST">
   <div style="margin:auto; width:60%">
   <h2><%= bean.getClubName() %></h2>
@@ -38,7 +34,6 @@
   		<tbody>
   		<tr>
   			<th colspan="3">部員登録申請者</th>
-
   		</tr>
   		<% for(int i = 0; i < bean.getUserIdList().size(); i++){ %>
   		<tr>
@@ -47,8 +42,7 @@
   			ヒント
   			Listの中身はget(【番号】)で取得できる。
   			 --%>
-  			<td><%=bean.getUserIdList().get(i) %></td>
-
+  			<td><%=bean.getUserNameList().get(i)  %></td>
   			<!-- ヒント
   			下記ボタンではボタンを押された際にuserIdと承認フラグ（承認:true,否認:false）を設定しリクエストをする
   			 -->
