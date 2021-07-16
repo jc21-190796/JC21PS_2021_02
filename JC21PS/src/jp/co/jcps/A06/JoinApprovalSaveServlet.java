@@ -14,7 +14,7 @@ import jp.co.jcps.Common.CommonCheck;
 import jp.co.jcps.Common.DBConnection;
 
 /**
- * 部員登録承認の登録処理
+ * 部員登録承認の登録処理.
  */
 @WebServlet("/JoinApprovalSave")
 public class JoinApprovalSaveServlet extends HttpServlet {
