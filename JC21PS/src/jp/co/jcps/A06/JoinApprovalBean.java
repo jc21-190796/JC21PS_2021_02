@@ -3,7 +3,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 /**
- * 部員登録承認画面のBean
+ * 部員登録承認画面のBean.
  */
 public class JoinApprovalBean implements Serializable {
 	// 部活名

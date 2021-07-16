@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import jp.co.jcps.Common.CommonCheck;
 import jp.co.jcps.Common.DBConnection;
 /**
- * 部員登録承認のコントローラー
+ * 部員登録承認のコントローラー.
  */
 @WebServlet("/JoinApprovalController")
 public class JoinApprovalControllerServlet extends HttpServlet {
