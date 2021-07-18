@@ -50,6 +50,7 @@ public class ClubInfoRegisterControllerServlet extends HttpServlet {
 		List<String> paramList = new ArrayList<String>();
 
 		paramList.add(leaderClubId);
+
 		// DB接続を初期化
 		DBConnection db = new DBConnection();
 

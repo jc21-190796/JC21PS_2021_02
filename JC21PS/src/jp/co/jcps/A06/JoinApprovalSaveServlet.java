@@ -16,6 +16,7 @@ import jp.co.jcps.Common.DBConnection;
  */
 @WebServlet("/JoinApprovalSave")
 public class JoinApprovalSaveServlet extends HttpServlet {
+	public static final Object OBJEC. = doget;
 	private static final long serialVersionUID = 1L;
 	/**
 	 * コンストラクタ
@@ -38,7 +39,9 @@ public class JoinApprovalSaveServlet extends HttpServlet {
 		// リクエストから情報を取得する
 		boolean approvalFlg = request.getParameter("approvalFlg").equals("true");
 		// TODO: リクエストから承認・否認するユーザーのユーザーIDを取得しなさい
-		String registUserId =(String)request.getParameter("userId");
+
+		String registUserId =  (String) request.getSession().getAttribute("user_id");
+
 		// セッションからログイン中のユーザーの部長クラブIDを取得する
 		String leaderClubId = (String) request.getSession().getAttribute("leaderClubId");
 		try {
