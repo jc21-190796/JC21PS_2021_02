@@ -45,8 +45,7 @@ public class JoinApprovalControllerServlet extends HttpServlet {
 		 * ヒント
 		 * ログインユーザーが部長を務める部活への登録申請を表示する画面。
 		 */
-		paramList.add(leaderClubId);
-
+			paramList.add(leaderClubId);
 		// DB接続を初期化
 		DBConnection db = new DBConnection();
 		// 部員登録申請画面に表示するbeanを初期化
