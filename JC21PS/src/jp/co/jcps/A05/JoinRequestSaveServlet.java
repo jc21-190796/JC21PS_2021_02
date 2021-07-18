@@ -63,7 +63,6 @@ public class JoinRequestSaveServlet extends HttpServlet {
 		paramList.add(userId);
 		paramList.add(clubId);
 
-
 		// SQLを実行しデータを登録
 		DBConnection db = new DBConnection();
 		try {
