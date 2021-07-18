@@ -40,7 +40,6 @@ public class ClubInfoRegisterControllerServlet extends HttpServlet {
 		}
 
 		// セッションからログイン中のユーザーの部長クラブIDを取得する
-		// TODO: セッション（ログインユーザーの情報を保持している）からログインユーザーの部長を務める部活の部活IDを取得する。
 
 		String leaderClubId = (String) request.getSession().getAttribute("leaderClubId");
 
